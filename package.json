@@ -1,0 +1,51 @@
+{
+  "name": "silverstripe-dropzone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --progress --colors --config webpack.config.babel.js",
+    "webpack:w": "npm run webpack -- --watch",
+    "scss": "gulp scss",
+    "scss:w": "gulp scss:w",
+    "build": "concurrently \"gulp scss\" \"npm run webpack\"",
+    "build:w": "concurrently \"gulp scss:w\" \"npm run webpack:w\"",
+    "build:production": "npm run webpack -- --optimize-minimize",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/timezoneone/silverstripe-general-portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/timezoneone/silverstripe-general-portal/issues"
+  },
+  "homepage": "https://gitlab.com/timezoneone/silverstripe-general-portal#README",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-ui-dist": "^1.12.1",
+    "timepicker": "^1.11.6",
+    "dropzone": "https://registry.npmjs.org/dropzone/-/dropzone-4.3.0.tgz"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "concurrently": "2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "webpack": "^1.12.14"
+  }
+}
