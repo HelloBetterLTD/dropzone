@@ -57,7 +57,7 @@ class ImageDropZoneField extends FormField
 ​
     public function Field($properties = array())
     {
-        Requirements::javascript('timezoneone/silverstripe-portal: client/dist/js/image-upload.js');
+        Requirements::javascript('client/dist/js/image-upload.js');
         return parent::Field($properties);
     }
 ​
